@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(6, 6, 56);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(133, 133, 218);
+    font-size: 1.02rem;
+}
+
+main hr {
+    border: 0;
+    background: rgb(92, 92, 138);
+    height: 1.2px;
+    margin: 60px 84px;
+}
+
+.projectTitle a {
+    text-decoration: none;
+    color: white;
+}
+
+.projectTitle a:hover {
+    color: rgb(133, 133, 218);
+    font-size: 1.48rem;
+}
+
+.left {
+    font-size: 1.5rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    margin: 90px 0;
+    align-items: center;
+}
+
+.firstSection>div {
+    width: 30%;
+
+}
+
+.leftSection {
+    font-size: 3rem;
+}
+
+.rightSection img {
+    width: 80%;
+}
+
+.purple {
+    color: hsl(290, 58%, 58%);
+}
+
+#element {
+    color: hsl(290, 61%, 58%);
+    font-style: italic;
+}
+
+.highlight {
+    font-style: italic;
+
+}
+
+.secondSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 70vh;
+}
+
+.secondSection h1 {
+    font-size: 1.9rem;
+}
+
+.aboutmeSection {
+    
+    margin: auto;
+    height: 30vh;
+}
+
+.contactMe {
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+.aboutmeSection h1 {
+    font-size: 1.9rem;
+}
+
+.thirdSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 70vh;
+}
+
+.thirdSection h1 {
+    font-size: 1.9rem;
+}
+
+.box {
+    background: white;
+    width: 78vw;
+    height: 2px;
+    margin: 80px 0;
+    display: flex;
+
+}
+
+.verticalLine {
+    height: 90px;
+    background-color: white;
+    width: 2px;
+    margin: 0 120px;
+}
+
+.text-gray {
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.image-one {
+    width: 40px;
+    position: relative;
+    top: -50px;
+    left: -15px;
+}
+
+.vertical-title {
+    position: relative;
+    top: 48px;
+    left: -4px;
+    width: 200px;
+}
+
+.vertical-text {
+    position: relative;
+    top: 50px;
+    left: -4px;
+    color: gray;
+    font-size: 10px;
+    width: 200px;
+}
+
+.boxOne {
+    width: 280px;
+    margin: 0 70px;
+}
+
+.companyName {
+    position: relative;
+    top: 50px;
+    width: 200px;
+    left: -5px;
+    color: gray;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.aboutmeSection p {
+    font-size: 1.2rem;
+    margin: 70px 0;
+}
+
+.projectTitle {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.projectContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectDesc {
+    color: gray;
+    font-size: 0.90rem;
+}
+
+.contactContainer {
+    display: flex;
+    height: 100vh;
+}
+
+.leftForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 60px;
+    margin-left: 10px;
+
+}
+
+.submitBtn {
+    width: 30vh;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background: linear-gradient(270deg, #4bc2f5, #1820bc);
+    cursor: pointer;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: rgb(239, 239, 239);
+}
+
+.contact-inputs::placeholder {
+    color: rgb(155, 155, 155);
+}
+
+.contactLeft textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus {
+    border: 2px solid hsl(249, 83%, 54%);
+}
+
+.descLine {
+    width: auto;
+    position: relative;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    padding-left: 200px;
+    padding-right: 30px;
+    font-size: 1rem;
+    text-align: right;
+    font-style: italic;
+    color: #b4b4bc;
+}
+
+.socialPic {
+    width: 20px;
+}
+
+.socialName {
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+    font-size: small;
+}
+
+.socialRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 280px
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialName:hover {
+    color: rgb(133, 133, 218);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgb(6, 6, 56);
+    height: 233px;
+}
+
+.footer {
+    display: flex;
+    padding: 25px 122px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 122px;
+    flex-wrap: wrap;
+}
+
+.footer-first {
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.footer-second {
+    text-align: right;
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.footer-second ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.footer-second a {
+    color: rgb(178, 178, 248);
+    text-decoration: none;
+}

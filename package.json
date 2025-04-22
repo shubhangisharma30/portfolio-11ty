@@ -1,0 +1,12 @@
+{
+  "name": "shubhangi11ty-portfolio",
+  "version": "1.0.0",
+  "description": "Shubhangi's Portfolio built with Eleventy",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

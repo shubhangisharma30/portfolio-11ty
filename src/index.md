@@ -1,0 +1,15 @@
+---
+title: Home
+layout: layouts/base.liquid
+---
+<section class="firstSection">
+  <div class="leftSection">
+    Hi, My name is
+    <span class="purple">Shubhangi Sharma</span>
+    <div>and I am a passionate</div>
+    <span id="element"></span>
+  </div>
+  <div class="rightSection">
+    <img src="/assets/images/profilepic1.png" alt="Profile picture">
+  </div>
+</section>

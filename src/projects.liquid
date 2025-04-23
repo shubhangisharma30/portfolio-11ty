@@ -1,0 +1,20 @@
+---
+title: Projects
+layout: layouts/base.liquid
+---
+
+<section class="page-section projectSection">
+  <h1>Projects</h1>
+  <span class="text-gray">Things I've built</span>
+</section>
+
+<div class="content-container projects-container">
+  {% for project in projects %}
+  <div class="card project-item">
+    <div class="title">
+      <a href="#">{{ project.title }}</a>
+    </div>
+    <div class="description">{{ project.description }}</div>
+  </div>
+  {% endfor %}
+</div>

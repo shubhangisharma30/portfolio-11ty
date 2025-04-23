@@ -15,11 +15,34 @@
   <main>
     {{ content }}
   </main>
-  {% include "partials/footer.liquid" %}
+  {% if title != "Home" %}
+    {% include "partials/footer.liquid" %}
+  {% endif %}
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script>
-  var typed = new Typed('#element', {
-    strings: ['Web Developer', 'Designer', 'Learner'],
-    typeSpeed: 50,
-  });
-</script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Designer', 'Learner'],
+      typeSpeed: 50,
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

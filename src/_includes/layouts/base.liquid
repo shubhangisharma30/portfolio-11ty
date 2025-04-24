@@ -35,13 +35,57 @@
         navMenu.classList.toggle('active');
       });
 
-      // Close menu when a link is clicked
       document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
           hamburger.classList.remove('active');
           navMenu.classList.remove('active');
         });
       });
+
+      // Timeline arrow navigation
+      const timelineWrapper = document.querySelector('.timeline-wrapper');
+      const timelineRow = document.querySelector('.timeline-row');
+      const leftArrow = document.querySelector('.arrow-left');
+      const rightArrow = document.querySelector('.arrow-right');
+      const items = document.querySelectorAll('.timeline-item');
+
+      if (timelineRow && items.length > 0) {
+        const itemWidth = items[0].offsetWidth + 30;
+        let itemsToShow = window.innerWidth <= 768 ? 1 : 2;
+        let currentPosition = 0;
+        const maxPosition = items.length - itemsToShow;
+
+        const updateArrows = () => {
+          leftArrow.disabled = currentPosition === 0;
+          rightArrow.disabled = currentPosition >= maxPosition;
+        };
+
+        const updateItemsToShow = () => {
+          itemsToShow = window.innerWidth <= 768 ? 1 : 2;
+          currentPosition = Math.min(currentPosition, items.length - itemsToShow);
+          timelineRow.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+          updateArrows();
+        };
+
+        leftArrow.addEventListener('click', () => {
+          if (currentPosition > 0) {
+            currentPosition--;
+            timelineRow.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+            updateArrows();
+          }
+        });
+
+        rightArrow.addEventListener('click', () => {
+          if (currentPosition < maxPosition) {
+            currentPosition++;
+            timelineRow.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+            updateArrows();
+          }
+        });
+
+        window.addEventListener('resize', updateItemsToShow);
+        updateItemsToShow();
+      }
     });
   </script>
 </body>

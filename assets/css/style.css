@@ -57,17 +57,16 @@ body {
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     display: block;
-    border: 3px solid yellow; /* Debugging */
-    background: red; /* Debugging */
 }
-
-.icon:not([src]),
-.icon[src=""] {
-    background: purple; /* Debugging */
+.socialPic{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
 }
 
 /* Navigation */
@@ -262,69 +261,99 @@ nav {
 
 /* Experience Page (experience.liquid) */
 .timeline-container {
-    margin: 40px auto 40px;
+    margin: 40px auto;
     position: relative;
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 600px; /* Narrower container */
+    margin: 0 auto;
+}
+
+.timeline-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between cards */
+    padding-left: 60px; /* Space for the vertical line and icon */
 }
 
 .timeline-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 60px;
     position: relative;
+    text-align: left;
+    transition: transform 0.3s ease; /* For hover effect */
 }
 
-.timeline-item:nth-child(odd) {
-    justify-content: flex-start;
+.timeline-item:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
 }
 
-.timeline-item:nth-child(even) {
-    justify-content: flex-end;
+.card {
+    background: linear-gradient(135deg, rgb(6, 6, 56), rgb(15, 15, 80)); /* Gradient background */
+    border-radius: 15px; /* Softer corners */
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Slight white border for contrast */
+    transition: box-shadow 0.3s ease;
 }
 
-.timeline-content {
-    width: 45%;
-    max-width: 450px;
+.timeline-item:hover .card {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.timeline-content .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular icon */
+    border: 2px solid hsl(290, 61%, 58%); /* Purple border */
+    position: absolute;
+    left: -60px; /* Position to the left of the card */
+    top: 25px; /* Align with the card’s top */
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .icon {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .timeline-content .title {
-    margin-bottom: 5px;
+    font-size: 1.5rem; /* Slightly larger for emphasis */
+    font-weight: 600; /* Bolder */
+    color: white;
+    margin-bottom: 8px;
+    font-style: normal; /* Remove italic for clarity */
 }
 
 .timeline-content .date {
     font-size: 1.1rem;
-    color: rgb(150, 150, 150);
-    font-style: italic;
+    color: rgb(180, 180, 180); /* Lighter gray for contrast */
     margin-bottom: 5px;
 }
 
 .timeline-content .company {
     font-size: 1.1rem;
-    color: rgb(150, 150, 150);
-    font-style: italic;
+    color: hsl(290, 61%, 58%); /* Purple for company name */
     margin-bottom: 10px;
+    font-style: normal; 
+}
+
+.timeline-content .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(200, 200, 200);
 }
 
 .timeline-line {
     position: absolute;
-    width: 2px;
-    background: white;
-    top: 50px;
-    bottom: -30px;
-    left: 50%;
+    width: 2px; /* Vertical line */
+    background: linear-gradient(to bottom, hsl(290, 100%, 8%), rgb(23, 1, 22), hsl(290, 95%, 8%)); /* Gradient line */
+    top: 0;
+    bottom: 0;
+    left: 20px; /* Positioned to the left of the cards */
+    z-index: -1;
+    border-radius: 2px;
 }
-
-.timeline-item:nth-child(odd) .timeline-line {
-    transform: translateX(-20px);
-}
-
-.timeline-item:nth-child(even) .timeline-line {
-    transform: translateX(20px);
-}
-
-.timeline-item:last-child .timeline-line {
-    display: none;
-}
-
 /* Projects Page (projects.liquid) */
 .projects-container {
     margin: 95px auto 120px;
@@ -336,7 +365,7 @@ nav {
 
 .project-item {
     flex: 1 1 200px;
-    max-width: 280px;
+    max-width: 300px;
 }
 
 .project-item .title {
@@ -350,8 +379,8 @@ nav {
 }
 
 .project-item .title a:hover {
-    color: rgb(133, 133, 218);
-    font-size: 1.48rem;
+    color: hsl(290, 61%, 58%);
+    font-size: 1.44rem;
 }
 
 /* Contact Page (contact.liquid) */
@@ -531,31 +560,58 @@ footer {
     }
 
     /* Experience */
-    .timeline-item,
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        justify-content: center;
-    }
-
-    .timeline-content {
-        width: 90%;
-        max-width: 100%;
-    }
-
-    .timeline-line {
-        left: 20px;
-        transform: none;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-line,
-    .timeline-item:nth-child(even) .timeline-line {
-        transform: none;
-    }
-
-    .timeline-content .icon {
-        width: 30px;
-        height: 30px;
-    }
+        .timeline-row {
+            gap: 20px;
+        }
+    
+        .timeline-item {
+            min-width: 280px; /* Smaller for mobile */
+        }
+    
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Softer shadow on mobile */
+        }
+    
+        .timeline-content .icon {
+            width: 35px;
+            height: 35px;
+        }
+    
+        .timeline-line {
+            top: 35px;
+            left: 30px;
+            right: 30px;
+            height: 2px; /* Thinner on mobile */
+        }
+    
+        .timeline-content .title {
+            font-size: 1.3rem;
+        }
+    
+        .timeline-content .date,
+        .timeline-content .company {
+            font-size: 0.9rem;
+        }
+    
+        .timeline-content .description {
+            font-size: 0.8rem;
+        }
+    
+        .arrow {
+            font-size: 1.5rem;
+            width: 35px;
+            height: 35px;
+        }
+    
+        .arrow-left {
+            margin-left: 5px;
+        }
+    
+        .arrow-right {
+            margin-right: 5px;
+        }
 
     /* Projects */
     .projects-container {

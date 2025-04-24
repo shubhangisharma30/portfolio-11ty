@@ -9,16 +9,20 @@ layout: layouts/base.liquid
 </section>
 
 <div class="content-container timeline-container">
-  {% for experience in experience %}
-  <div class="timeline-item">
-    <div class="card timeline-content">
-      <img class="icon" src="/images/{{ experience.icon | default: 'placeholder.png' }}" alt="{{ experience.designation }} logo">
-      <div class="title">{{ experience.designation }}</div>
-      <div class="date">{{ experience.from }} – {{ experience.to }}</div>
-      <div class="company">{{ experience.organization }}</div>
-      <div class="description">{{ experience.job_description }}</div>
+  <div class="timeline-wrapper">
+    <div class="timeline-column">
+      {% for experience in experience %}
+      <div class="timeline-item">
+        <div class="card timeline-content">
+          <img class="icon" src="/assets/images/{{ experience.icon | default: 'placeholder.png' }}" alt="{{ experience.designation }} logo">
+          <div class="title">{{ experience.designation }}</div>
+          <div class="date">{{ experience.from }} – {{ experience.to }}</div>
+          <div class="company">{{ experience.organization }}</div>
+          <div class="description">{{ experience.job_description }}</div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
     <div class="timeline-line"></div>
   </div>
-  {% endfor %}
 </div>

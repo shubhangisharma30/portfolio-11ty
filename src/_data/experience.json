@@ -4,34 +4,39 @@
         "organization": "Solana - OnPar Labs, Remote",
         "from": "09/2022",
         "to": "12/2022",
-        "job_description": "Maintained continuous awareness of the advancements within the Web3 domain. Helped the community and development teams collaborate smoothly for feature requests and bug reports."
+        "job_description": "Maintained continuous awareness of the advancements within the Web3 domain. Helped the community and development teams collaborate smoothly for feature requests and bug reports.",
+        "icon": "workex01.png"
     },
     {
         "designation": "Python Developer Intern",
         "organization": "Rapid Software Solutions, Udaipur",
         "from": "01/2023",
         "to": "02/2023",
-        "job_description": "Attained proficiency in the latest trends in web development and Python technologies. Implemented dynamic and interactive elements to elevate user experience, leveraging Python-based frameworks."
+        "job_description": "Attained proficiency in the latest trends in web development and Python technologies. Implemented dynamic and interactive elements to elevate user experience, leveraging Python-based frameworks.",
+        "icon": "workex02.png"
     },
     {
         "designation": "Business Developer Intern ",
         "organization": "Pando Corp, Chennai",
         "from": "07/2023",
         "to": "12/2023",
-        "job_description": "Acquired advanced proficiency in supply chain optimization. In the capacity of a SaaS company collaborator, provided the business development team with forward-thinking ideas and data-driven solutions."
+        "job_description": "Acquired advanced proficiency in supply chain optimization. In the capacity of a SaaS company collaborator, provided the business development team with forward-thinking ideas and data-driven solutions.",
+        "icon": "workex03.png"
     },
     {
         "designation": "Software Engineer Intern",
         "organization": "CloudBloom, Bengaluru",
         "from": "01/2024",
         "to": "07/2024",
-        "job_description": "Contibuted as a Software Developer, worked on a team project using React and TypeScript. Collaborated to develop and improve software solutions, and gained hands-on experience in modern web development and teamwork."
+        "job_description": "Contibuted as a Software Developer, worked on a team project using React and TypeScript. Collaborated to develop and improve software solutions, and gained hands-on experience in modern web development and teamwork.",
+        "icon": "workex04.png"
     },
     {
         "designation": "Freelancer Web Developer",
         "organization": "Freelancing",
         "from": "08/2024",
         "to": "Present",
-        "job_description": "Working on Web development with a focus on building responsive and scalable web applications."
+        "job_description": "Working on Web development with a focus on building responsive and scalable web applications.",
+        "icon": "workex05.png"
     }
 ]

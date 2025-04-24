@@ -8,3 +8,7 @@ To get this up and running
 npm install
 npm start
 ```
+
+## Setting up `develop` branch
+
+The `develop` branch will have incremental updates that are yet to pushed to production (`main`)
